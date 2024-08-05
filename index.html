@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heavenly Bakes</title>
 
+  
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+  
 </head>
 <body>
     <header class="header bg-color">
@@ -22,7 +31,7 @@
                             <li><i class="fa-solid fa-igloo nav-icon"></i><a href="#home" class="nav-link">Home</a></li>
                             <li><i class="fa-solid fa-pen-nib nav-icon"></i><a href="#about-us" class="nav-link">About Us</a></li>
                             <li><i class="fa-solid fa-utensils nav-icon"></i><a href="#specials" class="nav-link">Specials</a></li>
-                            <li><i class="fa-solid fa-cookie nav-icon"></i><a href="#Menu" class="nav-link">Menu</a></li>
+                            <li><i class="fa-solid fa-cookie nav-icon"></i><a href="#menu" class="nav-link">Menu</a></li>
                             <li><i class="fa-solid fa-paper-plane nav-icon"></i><a href="#contact" class="nav-link">Contact</a></li>
                         </ul>
                     </div>
@@ -43,15 +52,15 @@
                             <li><a href="#home" class="nav-link">Home</a></li>
                             <li><a href="#about-us" class="nav-link">About Us</a></li>
                             <li><a href="#specials" class="nav-link">Specials</a></li>
-                            <li><a href="#Menu" class="nav-link">Menu</a></li>
+                            <li><a href="#menu" class="nav-link">Menu</a></li>
                             <li><a href="#contact" class="nav-link">Contact</a></li>
                         </ul>
                     </div>
-                    <div class="social-media">
-                        <i class="fa-brands fa-square-facebook"></i>
-                        <i class="fa-brands fa-square-twitter"></i>
-                        <i class="fa-brands fa-linkedin"></i>
-                        <i class="fa-brands fa-square-google-plus"></i>
+                    <div class="socials-media">
+                        <a href="#"><i class="fa-brands fa-square-facebook "></i></a>
+                       <a href="#"> <i class="fa-brands fa-square-twitter "></i></a>
+                      <a href="#">  <i class="fa-brands fa-linkedin "></i></a>
+                       <a href="#"> <i class="fa-brands fa-square-google-plus "></i></a>
                     </div>
                     <div class="menu-icon">
                         <i class="fa-solid fa-bars open-icon"></i>
@@ -63,19 +72,21 @@
 
     <main>
         <article>
-            <section class="bg-color section-padd">
+            <section class="bg-color bg-image section-padd" id="home">
+                <div class="container">
                 <div class="hero-section row">
                     <div class="hero-content">
                         <h1 class="text-center">Welcome to <span class="subheading">Heavenly Bakes</span></h1>
                         <h3  class="text-center">Where every bite is a taste of bliss</h3>
-                        <!-- <div class="buttons">
-                            <span class="btn btn-yellow"><a href="">Explore Our Menu</a></span>
-                            <span class="btn btn-outline"><img src="images/bun-icon.png" alt=""><a href="">Explore Our Menu</a><i class="fa-solid fa-angle-right"></i></span>
-                        </div> -->
+                     <div class="buttons">
+                            
+                            <a class="btn btn-outline aboutBtn" href="#">
+                                <span class="order">Explore Our Menu</span><i class="fa-solid fa-angle-right"></i></a>
+                        </div> 
                     </div>
                     <div class="hero-img">
                         <img class="title-padd" src="images/buket.png" alt="">
-                        <a class="btn btn-outline" href="#">
+                        <a class="btn btn-outline secondary-btn" href="#">
                             
                             <svg class="bun-icon" xmlns="http://www.w3.org/2000/svg" width="22.679" height="17.899" viewBox="0 0 22.679 17.899">
                                 <g id="bun-icon" transform="translate(1300.497 -1437.678)">
@@ -108,7 +119,7 @@
                                 </div>
                             </div>
                         </div>
-    
+                    </div>
                 </div>
             </section>
 
@@ -117,21 +128,25 @@
                 <div class="container">
                     <div class="text-center">
                 <h2 class="title-padd">About Us</h2>
-                <p>At Heavenly Bakes, we’re passionate about creating mouthwatering treats that bring joy to every bite. Our bakery is a
+                <p class="about-text">At Heavenly Bakes, we’re passionate about creating mouthwatering treats that bring joy to every bite. Our bakery is a
                     family- owned business dedicated to crafting high-quality baked goods using only the finest ingredients. From our buttery croissants to our decadent cakes, each product is made with love and a touch of magic.</p>
-                    <a class="btn btn-outline aboutBtn" href="#">
+                    <a class="btn btn-outline more-btn" href="#">
                         <span class="order">More About</span><i class="fa-solid fa-angle-right"></i></a>
                 </div>
                 <div class="chef-page title-padd ">
                     <div class="chef-img">
                         <img src="images/chef 1.png" alt="">
+                        <div class="rating-box">
+                            <i class="fa-solid fa-star"></i>
+                            <span><b>4.7</b>/5</span>
+                            <span>Good Taste</span>
+                        </div>
                     </div>
                     <div class="chef-content text-center">
                         <h6 class="chef-name">Chef Liam <img src="images/chef hat.png" alt="hat"></h6>
                         <h2 class="title-padd-sm">The Bread Maestro</h2>
                         <p>Chef Liam, a master of traditional bread-making, crafts sourdoughs and baguettes that are cherished by our community. His dedication to perfecting classic recipes ensures every loaf is a true work of art.</p>
-                        <a class="btn btn-outline" href="#">
-                            
+                        <a class="btn btn-outline left-align" href="#">
                             <svg class="bun-icon" xmlns="http://www.w3.org/2000/svg" width="22.679" height="17.899" viewBox="0 0 22.679 17.899">
                                 <g id="bun-icon" transform="translate(1300.497 -1437.678)">
                                   <path id="Path_590" data-name="Path 590" d="M-1289.188,1546.149h-7.382a3.876,3.876,0,0,1-3.9-3.467,5.149,5.149,0,0,1,1.08-3.616,9.4,9.4,0,0,1,3.883-2.973,14.458,14.458,0,0,1,4.525-1.177,17.654,17.654,0,0,1,3.5-.032,13.534,13.534,0,0,1,6.5,2.217,7.122,7.122,0,0,1,2.757,3.24,4.139,4.139,0,0,1-.374,4.216,3.715,3.715,0,0,1-3.113,1.589C-1284.2,1546.155-1286.694,1546.149-1289.188,1546.149Zm-7.726-8.306a6.917,6.917,0,0,0-1.971,1.937,4.34,4.34,0,0,0-.782,2.614,3.088,3.088,0,0,0,3.15,2.945q7.356,0,14.712,0a3.517,3.517,0,0,0,.919-.131,3.108,3.108,0,0,0,2.111-3.906,6.227,6.227,0,0,0-2.787-3.576.389.389,0,0,0-.237-.051,3.232,3.232,0,0,0-2.819,2.458,3.44,3.44,0,0,1-.1.366,1.211,1.211,0,0,1-1.469.754,1.2,1.2,0,0,1-.872-1.378,5.474,5.474,0,0,1,1.157-2.519c.33-.4.682-.786,1-1.148a2.7,2.7,0,0,0-.76-.14,3.4,3.4,0,0,0-1.048.256,4.359,4.359,0,0,0-2.806,3.489,1.233,1.233,0,0,1-1.381,1.071,1.222,1.222,0,0,1-1.033-1.409,6.929,6.929,0,0,1,1.422-3.247c.138-.174.285-.341.467-.559-.326.026-.591.051-.857.068a3.782,3.782,0,0,0-2.084.738,4.455,4.455,0,0,0-1.8,2.938,1.215,1.215,0,0,1-1.45,1.063,1.175,1.175,0,0,1-.943-1.453C-1297.1,1538.633-1297,1538.25-1296.915,1537.843Zm9.43-2.117c-.385-.027-.77-.061-1.155-.077a.406.406,0,0,0-.247.091,6.036,6.036,0,0,0-2.2,3.66c-.078.407.037.632.318.671.255.036.416-.137.484-.524a5.144,5.144,0,0,1,.865-2.077A6.151,6.151,0,0,1-1287.485,1535.726Zm4.656,1.274c-.217-.094-.474-.195-.721-.316a.37.37,0,0,0-.4.025,4.8,4.8,0,0,0-2.029,2.373,5.615,5.615,0,0,0-.268.942.384.384,0,0,0,.306.455.411.411,0,0,0,.487-.3,1.19,1.19,0,0,0,.029-.122,3.709,3.709,0,0,1,1.206-2.109A15.719,15.719,0,0,1-1282.828,1537Zm-11.455-.521c-.42.183-.842.361-1.258.553a.452.452,0,0,0-.183.192,5.952,5.952,0,0,0-.658,2,.366.366,0,0,0,.3.448.388.388,0,0,0,.487-.323A5.889,5.889,0,0,1-1294.283,1536.479Z" transform="translate(0 -90.574)"/>
@@ -141,16 +156,591 @@
                                   <path id="Path_594" data-name="Path 594" d="M-1267.132,1656.219q-3.273,0-6.546,0a5.28,5.28,0,0,1-2.916-.842c-.265-.17-.342-.4-.2-.61a.413.413,0,0,1,.62-.078,4.7,4.7,0,0,0,2.612.723q6.445-.011,12.89,0a4.659,4.659,0,0,0,2.546-.69.412.412,0,0,1,.617.094c.129.212.058.431-.2.593a5.243,5.243,0,0,1-2.875.81Q-1263.859,1656.216-1267.132,1656.219Z" transform="translate(-22.036 -202.262)"/>
                                 </g>
                               </svg>
-                            
+                            <span class="order">Order Now</span><i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="chef-page reverse title-padd ">
+                    <div class="chef-img">
+                        <img src="images/chef 2.png" alt="">
+                        <div class="rating-box">
+                            <i class="fa-solid fa-star"></i>
+                            <span><b>4.7</b>/5</span>
+                            <span>Good Taste</span>
+                        </div>
+                    </div>
+                    <div class="chef-content text-center">
+                        <h6 class="chef-name">Chef Anna <img src="images/chef hat.png" alt="hat"></h6>
+                        <h2 class="title-padd-sm">Artisan of Delight</h2>
+                        <p>With over 15 years of experience, Chef Emma is renowned for her exquisite pastries and cakes. Her innovative flavors and meticulous attention to detail make her creations truly extraordinary.</p>
+                        <a class="btn btn-outline left-align" href="#">
+                            <svg class="bun-icon" xmlns="http://www.w3.org/2000/svg" width="22.679" height="17.899" viewBox="0 0 22.679 17.899">
+                                <g id="bun-icon" transform="translate(1300.497 -1437.678)">
+                                  <path id="Path_590" data-name="Path 590" d="M-1289.188,1546.149h-7.382a3.876,3.876,0,0,1-3.9-3.467,5.149,5.149,0,0,1,1.08-3.616,9.4,9.4,0,0,1,3.883-2.973,14.458,14.458,0,0,1,4.525-1.177,17.654,17.654,0,0,1,3.5-.032,13.534,13.534,0,0,1,6.5,2.217,7.122,7.122,0,0,1,2.757,3.24,4.139,4.139,0,0,1-.374,4.216,3.715,3.715,0,0,1-3.113,1.589C-1284.2,1546.155-1286.694,1546.149-1289.188,1546.149Zm-7.726-8.306a6.917,6.917,0,0,0-1.971,1.937,4.34,4.34,0,0,0-.782,2.614,3.088,3.088,0,0,0,3.15,2.945q7.356,0,14.712,0a3.517,3.517,0,0,0,.919-.131,3.108,3.108,0,0,0,2.111-3.906,6.227,6.227,0,0,0-2.787-3.576.389.389,0,0,0-.237-.051,3.232,3.232,0,0,0-2.819,2.458,3.44,3.44,0,0,1-.1.366,1.211,1.211,0,0,1-1.469.754,1.2,1.2,0,0,1-.872-1.378,5.474,5.474,0,0,1,1.157-2.519c.33-.4.682-.786,1-1.148a2.7,2.7,0,0,0-.76-.14,3.4,3.4,0,0,0-1.048.256,4.359,4.359,0,0,0-2.806,3.489,1.233,1.233,0,0,1-1.381,1.071,1.222,1.222,0,0,1-1.033-1.409,6.929,6.929,0,0,1,1.422-3.247c.138-.174.285-.341.467-.559-.326.026-.591.051-.857.068a3.782,3.782,0,0,0-2.084.738,4.455,4.455,0,0,0-1.8,2.938,1.215,1.215,0,0,1-1.45,1.063,1.175,1.175,0,0,1-.943-1.453C-1297.1,1538.633-1297,1538.25-1296.915,1537.843Zm9.43-2.117c-.385-.027-.77-.061-1.155-.077a.406.406,0,0,0-.247.091,6.036,6.036,0,0,0-2.2,3.66c-.078.407.037.632.318.671.255.036.416-.137.484-.524a5.144,5.144,0,0,1,.865-2.077A6.151,6.151,0,0,1-1287.485,1535.726Zm4.656,1.274c-.217-.094-.474-.195-.721-.316a.37.37,0,0,0-.4.025,4.8,4.8,0,0,0-2.029,2.373,5.615,5.615,0,0,0-.268.942.384.384,0,0,0,.306.455.411.411,0,0,0,.487-.3,1.19,1.19,0,0,0,.029-.122,3.709,3.709,0,0,1,1.206-2.109A15.719,15.719,0,0,1-1282.828,1537Zm-11.455-.521c-.42.183-.842.361-1.258.553a.452.452,0,0,0-.183.192,5.952,5.952,0,0,0-.658,2,.366.366,0,0,0,.3.448.388.388,0,0,0,.487-.323A5.889,5.889,0,0,1-1294.283,1536.479Z" transform="translate(0 -90.574)"/>
+                                  <path id="Path_591" data-name="Path 591" d="M-1142.387,1438.932a1.657,1.657,0,0,1-.433,1.112.806.806,0,0,0-.038,1.194.4.4,0,0,1-.032.585.407.407,0,0,1-.585-.063,1.618,1.618,0,0,1-.069-2.127c.452-.559.461-.72.071-1.31a.4.4,0,0,1,.064-.546.39.39,0,0,1,.548.028A1.588,1.588,0,0,1-1142.387,1438.932Z" transform="translate(-146.014)"/>
+                                  <path id="Path_592" data-name="Path 592" d="M-1078.046,1458.669a1.647,1.647,0,0,1,.43-1.112.807.807,0,0,0,.042-1.194.4.4,0,0,1,.027-.586.4.4,0,0,1,.585.058,1.615,1.615,0,0,1,.042,2.165.82.82,0,0,0-.06,1.252.4.4,0,0,1-.042.566.4.4,0,0,1-.567-.041A1.587,1.587,0,0,1-1078.046,1458.669Z" transform="translate(-207.429 -16.784)"/>
+                                  <path id="Path_593" data-name="Path 593" d="M-1209.827,1464.63a1.64,1.64,0,0,1,.426-1.076.805.805,0,0,0,.051-1.194.4.4,0,0,1,.017-.587.409.409,0,0,1,.6.067,1.616,1.616,0,0,1,.034,2.146c-.419.5-.429.725-.053,1.271a.4.4,0,0,1-.047.548.4.4,0,0,1-.568-.031A1.593,1.593,0,0,1-1209.827,1464.63Z" transform="translate(-84.547 -22.371)"/>
+                                  <path id="Path_594" data-name="Path 594" d="M-1267.132,1656.219q-3.273,0-6.546,0a5.28,5.28,0,0,1-2.916-.842c-.265-.17-.342-.4-.2-.61a.413.413,0,0,1,.62-.078,4.7,4.7,0,0,0,2.612.723q6.445-.011,12.89,0a4.659,4.659,0,0,0,2.546-.69.412.412,0,0,1,.617.094c.129.212.058.431-.2.593a5.243,5.243,0,0,1-2.875.81Q-1263.859,1656.216-1267.132,1656.219Z" transform="translate(-22.036 -202.262)"/>
+                                </g>
+                              </svg>
                             <span class="order">Order Now</span><i class="fa-solid fa-angle-right"></i></a>
                     </div>
                 </div>
                 </div>
              </section>
 
+             <!-- ============== specials ================== -->
+              <section class="special-section bg-color section-padd" id="specials">
+                <div class="container">
+                   <div class="specials-head text-center">
+                    <h2 class="title-padd">Specials</h2>
+                    <p class="special-text">At Heavenly Bakes, we believe in making every visit a delightful experience with our ever-changing selection of seasonal and unique treats. Here’s a taste of what’s currently baking:</p>
+                   </div>
+                   <div class="specials-content">
+                    <div class="special-img">
+                        <img src="images/pancakes-special.png" alt="">
+                    </div>
+                    <div class="spicial-texts">
+                        <div class="spcials-text">
+                            <h6 class="title-padd-sm">Fluffy Perfection</h6>
+                            <div class="point-text">
+                                <span class="num">01</span>
+                                <p>Light and airy pancakes made from scratch
+                                    for the ultimate in fluffiness and taste.</p>
+                            </div>
+                        </div>
+                        <div class="spcials-text">
+                            <h6 class="title-padd-sm">Fresh Red Grapes</h6>
+                            <div class="point-text">
+                                <span class="num">02</span>
+                                <p>Topped with juicy red grapes and a homemade grape compote for a burst of sweet, fruity flavor</p>
+                            </div>
+                        </div>
+                        <div class="spcials-text">
+                            <h6 class="title-padd-sm">Delightful Drizzle</h6>
+                            <div class="point-text">
+                                <span class="num">03</span>
+                                <p>Finished with a touch of honey for a hint of natural sweetness and a glossy finish.</p>
+                            </div>
+                    </div>
+                    </div>
+                   </div>
+                </div>
+              </section>
+
+              <!-- ============= menu ======================== -->
+               <section class="menu-section bg-color section-padd" id="menu">
+                <div class="container">
+                <h2 class="title-padd text-center">Menu</h2>
+                <div class="menu-buttons">
+                   <div class="menu-plus-btn">
+                    <span><i class="fa-solid fa-plus menu-open"></i></span>
+                   <span><i class="fa-solid fa-xmark menu-close"></i></span>
+                   </div>
+                   <div class="menu-filter-btns">
+                    <!-- <ul>
+                        <li class="menu-filter">All</li>
+                        <li class="menu-filter">Pan Cakes</li>
+                        <li class="menu-filter">Buns</li>
+                        <li class="menu-filter">Bakery Items</li>
+                    </ul> -->
+                    <div class="menu-float-btns">
+                        <a href="#" class="float-btn" data-filter="all">All</a>
+                    
+                        <a href="#" class="float-btn" data-filter="all-pancakes">Pan Cakes</a>
+                   
+                        <a href="#" class="float-btn" data-filter="all-buns" >Buns</a>
+                    
+                        <a href="#" class="float-btn" data-filter="all-bakery-item">Bakery Items</a>
+                    </div>
+
+                   </div>
+                </div>
+
+                <!-- ====================cards starting ============== -->
+                <div class="menu-items">
+                    
+                    <div class="menu-item">
+                        <div class="cards" data-category="all-pancakes">
+                            <img src="images/fluffy 1.png" alt="">
+                        <div class="menu-box">
+                            <p class="dish-title">Fluffy Buttermilk Pancakes</p>
+                        <div class="star-rate">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="rate">
+                                <span>₹ 664</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Soft pancakes with maple syrup
+                                and whipped cream</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="cards" data-category="all-pancakes">
+                            <img src="images/pancake 2.png" alt="">
+                        <div class="menu-box">
+                            <p class="dish-title">Berry Delight Pancakes</p>
+                        <div class="star-rate">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="rate">
+                                <span>₹ 830</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Pancakes topped with fresh
+                                berries and berry compote.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="cards" data-category="all-pancakes">
+                            <img src="images/pancake 3.png" alt="">
+                        <div class="menu-box">
+                            <p class="dish-title">Banana Nut Pancakes</p>
+                        <div class="star-rate">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="rate">
+                                <span>₹ 747</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Pancakes with bananas, walnuts,
+                                and caramel drizzle.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="cards" data-category="all-pancakes">
+                            <img src="images/pancake 2.png" alt="">
+                        <div class="menu-box">
+                            <p class="dish-title">Grape Delight Pancakes</p>
+                        <div class="star-rate">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="rate">
+                                <span>₹ 913</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Pancakes with red grapes & grape
+                                compote, finished with honey.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="cards" data-category="all-buns">
+                            <img src="images/bun 1.png" alt="">
+                        <div class="menu-box">
+                            <p class="dish-title">Classic Brioche Buns</p>
+                        <div class="star-rate">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="rate">
+                                <span>₹ 208</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Soft and buttery, perfect for
+                                sandwiches.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="cards"data-category="all-buns">
+                            <img src="images/bun 2.png" alt="">
+                        <div class="menu-box">
+                            <p class="dish-title">Cheddar and Jalapeño Buns</p>
+                        <div class="star-rate">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="rate">
+                                <span>₹ 249</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Savory buns with cheddar cheese
+                                and jalapeño.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="cards" data-category="all-buns">
+                            <img src="images/bun 3.png" alt="">
+                        <div class="menu-box">
+                            <p class="dish-title">Cinnamon Sugar Buns</p>
+                        <div class="star-rate">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="rate">
+                                <span>₹ 229</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Sweet buns coated in cinnamon
+                                and sugar.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="cards" data-category="all-buns">
+                            <img src="images/bun 4.png" alt="">
+                        <div class="menu-box">
+                            <p class="dish-title">Whole Wheat Buns</p>
+                        <div class="star-rate">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="rate">
+                                <span>₹ 229</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Nutty, hearty buns made with
+                                whole wheat flour.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        
+                        <div class="cards" data-category="all-bakery-item">
+                            <img src="images/bakery item 1.png" alt="">
+                        <div class="menu-box">
+                            <p class="dish-title">Decadent Red Velvet Cake</p>
+                        <div class="star-rate">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="rate">
+                                <span>₹ 3,320</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Rich red velvet cake with cream
+                                cheese frosting</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="cards" data-category="all-bakery-item">
+                            <img src="images/bakery item 2.png" alt="">
+                        <div class="menu-box">
+                            <p class="dish-title">Pumpkin Spice Croissants</p>
+                        <div class="star-rate">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="rate">
+                                <span>₹ 415 (loaf)</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Buttery croissants with pumpkin
+                                spice.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="cards" data-category="all-bakery-item">
+                            <img src="images/bakery item 3.png" alt="">
+                        <div class="menu-box">
+                            <p class="dish-title">Signature Artisan Bread</p>
+                        <div class="star-rate">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="rate">
+                                <span>₹ 290</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Crusty bread with a
+                                perfect crumb.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="cards" data-category="all-bakery-item">
+                            <img src="images/bakery item 4.png" alt="">
+                        <div class="menu-box">
+                            <p class="dish-title">Berry Bliss Tarts</p>
+                        <div class="star-rate">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="rate">
+                                <span>₹ 332</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Tarts filled with fresh berries
+                                and cream cheese frosting.</p>
+                        </div>
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+               </section>
+               <!-- ==========menu end ========== -->
+                <!-- ========== testmonial start ========== -->
+                <section class="bg-color section-padd">
+                    <div class="container">
+                        <div class="testimonials">
+                            <h2 class="title-padd text-center">comments</h2>
+                            <div class="testimonial-container swiper">
+                            <div class="testimonial-wrapper swiper-wrapper">
+                                <div class="testimonial-cards swiper-slide">
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-img">
+                                            <div class="client-img">
+                                                <img src="images/client 1.png" alt="">
+                                            </div>
+                                            <div class="client-name">
+                                            <span class="customer-name">Anita R.</span>
+                                            <span class="customer-job">Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                        <div class="sm-icons">
+                    <a href="#"><i class="fa-brands fa-square-facebook sm-icon"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-twitter sm-icon"></i></a>
+                    <a href="#">  <i class="fa-brands fa-linkedin sm-icon"></i></a>
+                     <a href="#"> <i class="fa-brands fa-square-google-plus sm-icon"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>Heavenly Bakes has quickly become my go-to spot for delicious treats! The Fluffy Buttermilk Pancakes are out of this world, and the Cheddar and Jalapeño Buns are a savory delight. Highly recommend!</p>
+                                    </div>
+                                </div>
+
+                                <div class="testimonial-cards swiper-slide">
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-img">
+                                            <div class="client-img">
+                                                <img src="images/client 2.png" alt="">
+                                            </div>
+                                            <div class="client-name">
+                                            <span class="customer-name">Rajesh K.</span>
+                                            <span class="customer-job">Software Developer</span>
+                                            </div>
+                                        </div>
+                                        <div class="sm-icons">
+                    <a href="#"><i class="fa-brands fa-square-facebook sm-icon"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-twitter sm-icon"></i></a>
+                    <a href="#">  <i class="fa-brands fa-linkedin sm-icon"></i></a>
+                     <a href="#"> <i class="fa-brands fa-square-google-plus sm-icon"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>The Red Velvet Cake from Heavenly Bakes is simply divine. It’s moist, flavorful, and beautifully decorated. Every bite is a little piece of heaven. A must-try for any dessert lover!</p>
+                                    </div>
+                                </div>
+
+                                <div class="testimonial-cards swiper-slide">
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-img">
+                                            <div class="client-img">
+                                                <img src="images/client 1.png" alt="">
+                                            </div>
+                                            <div class="client-name">
+                                            <span class="customer-name">Anita R.</span>
+                                            <span class="customer-job">Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                        <div class="sm-icons">
+                    <a href="#"><i class="fa-brands fa-square-facebook sm-icon"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-twitter sm-icon"></i></a>
+                    <a href="#">  <i class="fa-brands fa-linkedin sm-icon"></i></a>
+                     <a href="#"> <i class="fa-brands fa-square-google-plus sm-icon"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>Heavenly Bakes has quickly become my go-to spot for delicious treats! The Fluffy Buttermilk Pancakes are out of this world, and the Cheddar and Jalapeño Buns are a savory delight. Highly recommend!</p>
+                                    </div>
+                                </div>
+
+                                <div class="testimonial-cards swiper-slide">
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-img">
+                                            <div class="client-img">
+                                                <img src="images/client 1.png" alt="">
+                                            </div>
+                                            <div class="client-name">
+                                            <span class="customer-name">Anita R.</span>
+                                            <span class="customer-job">Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                        <div class="sm-icons">
+                    <a href="#"><i class="fa-brands fa-square-facebook sm-icon"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-twitter sm-icon"></i></a>
+                    <a href="#">  <i class="fa-brands fa-linkedin sm-icon"></i></a>
+                     <a href="#"> <i class="fa-brands fa-square-google-plus sm-icon"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>Heavenly Bakes has quickly become my go-to spot for delicious treats! The Fluffy Buttermilk Pancakes are out of this world, and the Cheddar and Jalapeño Buns are a savory delight. Highly recommend!</p>
+                                    </div>
+                                </div>
+
+                                
+
+                            </div>
+                            <div class="slide-button">
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+               
+                <!-- ====================contact =========== -->
+                <section class="bg-color section-padd" id="contact">
+                    <div class="container">
+                        <h2 class="title-padd text-center">Contacts</h2>
+                        <div class="contact-container">
+                            <div class="form">
+                                <form action="#">
+                                    <div class="input-group">
+                                        <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" required>
+                                    </div>
+                                    <div class="textarea">
+                                        <textarea id="message"  name="message" cols="30" rows="4" placeholder="Your comments here" required></textarea>
+                                    </div>
+                                </form>
+                                <a class="btn btn-outline" href="#">
+                            
+                                    <svg class="bun-icon" xmlns="http://www.w3.org/2000/svg" width="22.679" height="17.899" viewBox="0 0 22.679 17.899">
+                                        <g id="bun-icon" transform="translate(1300.497 -1437.678)">
+                                          <path id="Path_590" data-name="Path 590" d="M-1289.188,1546.149h-7.382a3.876,3.876,0,0,1-3.9-3.467,5.149,5.149,0,0,1,1.08-3.616,9.4,9.4,0,0,1,3.883-2.973,14.458,14.458,0,0,1,4.525-1.177,17.654,17.654,0,0,1,3.5-.032,13.534,13.534,0,0,1,6.5,2.217,7.122,7.122,0,0,1,2.757,3.24,4.139,4.139,0,0,1-.374,4.216,3.715,3.715,0,0,1-3.113,1.589C-1284.2,1546.155-1286.694,1546.149-1289.188,1546.149Zm-7.726-8.306a6.917,6.917,0,0,0-1.971,1.937,4.34,4.34,0,0,0-.782,2.614,3.088,3.088,0,0,0,3.15,2.945q7.356,0,14.712,0a3.517,3.517,0,0,0,.919-.131,3.108,3.108,0,0,0,2.111-3.906,6.227,6.227,0,0,0-2.787-3.576.389.389,0,0,0-.237-.051,3.232,3.232,0,0,0-2.819,2.458,3.44,3.44,0,0,1-.1.366,1.211,1.211,0,0,1-1.469.754,1.2,1.2,0,0,1-.872-1.378,5.474,5.474,0,0,1,1.157-2.519c.33-.4.682-.786,1-1.148a2.7,2.7,0,0,0-.76-.14,3.4,3.4,0,0,0-1.048.256,4.359,4.359,0,0,0-2.806,3.489,1.233,1.233,0,0,1-1.381,1.071,1.222,1.222,0,0,1-1.033-1.409,6.929,6.929,0,0,1,1.422-3.247c.138-.174.285-.341.467-.559-.326.026-.591.051-.857.068a3.782,3.782,0,0,0-2.084.738,4.455,4.455,0,0,0-1.8,2.938,1.215,1.215,0,0,1-1.45,1.063,1.175,1.175,0,0,1-.943-1.453C-1297.1,1538.633-1297,1538.25-1296.915,1537.843Zm9.43-2.117c-.385-.027-.77-.061-1.155-.077a.406.406,0,0,0-.247.091,6.036,6.036,0,0,0-2.2,3.66c-.078.407.037.632.318.671.255.036.416-.137.484-.524a5.144,5.144,0,0,1,.865-2.077A6.151,6.151,0,0,1-1287.485,1535.726Zm4.656,1.274c-.217-.094-.474-.195-.721-.316a.37.37,0,0,0-.4.025,4.8,4.8,0,0,0-2.029,2.373,5.615,5.615,0,0,0-.268.942.384.384,0,0,0,.306.455.411.411,0,0,0,.487-.3,1.19,1.19,0,0,0,.029-.122,3.709,3.709,0,0,1,1.206-2.109A15.719,15.719,0,0,1-1282.828,1537Zm-11.455-.521c-.42.183-.842.361-1.258.553a.452.452,0,0,0-.183.192,5.952,5.952,0,0,0-.658,2,.366.366,0,0,0,.3.448.388.388,0,0,0,.487-.323A5.889,5.889,0,0,1-1294.283,1536.479Z" transform="translate(0 -90.574)"/>
+                                          <path id="Path_591" data-name="Path 591" d="M-1142.387,1438.932a1.657,1.657,0,0,1-.433,1.112.806.806,0,0,0-.038,1.194.4.4,0,0,1-.032.585.407.407,0,0,1-.585-.063,1.618,1.618,0,0,1-.069-2.127c.452-.559.461-.72.071-1.31a.4.4,0,0,1,.064-.546.39.39,0,0,1,.548.028A1.588,1.588,0,0,1-1142.387,1438.932Z" transform="translate(-146.014)"/>
+                                          <path id="Path_592" data-name="Path 592" d="M-1078.046,1458.669a1.647,1.647,0,0,1,.43-1.112.807.807,0,0,0,.042-1.194.4.4,0,0,1,.027-.586.4.4,0,0,1,.585.058,1.615,1.615,0,0,1,.042,2.165.82.82,0,0,0-.06,1.252.4.4,0,0,1-.042.566.4.4,0,0,1-.567-.041A1.587,1.587,0,0,1-1078.046,1458.669Z" transform="translate(-207.429 -16.784)"/>
+                                          <path id="Path_593" data-name="Path 593" d="M-1209.827,1464.63a1.64,1.64,0,0,1,.426-1.076.805.805,0,0,0,.051-1.194.4.4,0,0,1,.017-.587.409.409,0,0,1,.6.067,1.616,1.616,0,0,1,.034,2.146c-.419.5-.429.725-.053,1.271a.4.4,0,0,1-.047.548.4.4,0,0,1-.568-.031A1.593,1.593,0,0,1-1209.827,1464.63Z" transform="translate(-84.547 -22.371)"/>
+                                          <path id="Path_594" data-name="Path 594" d="M-1267.132,1656.219q-3.273,0-6.546,0a5.28,5.28,0,0,1-2.916-.842c-.265-.17-.342-.4-.2-.61a.413.413,0,0,1,.62-.078,4.7,4.7,0,0,0,2.612.723q6.445-.011,12.89,0a4.659,4.659,0,0,0,2.546-.69.412.412,0,0,1,.617.094c.129.212.058.431-.2.593a5.243,5.243,0,0,1-2.875.81Q-1263.859,1656.216-1267.132,1656.219Z" transform="translate(-22.036 -202.262)"/>
+                                        </g>
+                                      </svg>
+                                    
+                                    <span class="order">Send message</span><i class="fa-solid fa-angle-right"></i></a>
+                            </div>
+                            <div class="contact-content ">
+                                <div class="contact-text">
+                                    <div class="headline">
+                                        <h3 class="title-padd-sm">Contact us in a convenient way:</h3>
+                                    </div>
+                                    <div class="phone">
+                                        <h3 class="title-padd-sm">Phone:</h3>
+                                        <span>+91 98765 43210</span>
+                                        <span>+91 91234 56789</span>
+                                    </div>
+                                    <div class="Email">
+                                        <h3 class="title-padd-sm">Email:</h3>
+                                        <span>info@heavenlybakes.com</span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="footer-sec title-padd">
+                    <div class="container">
+                        <div class="footer-container">
+                            <div class="footer logo">
+                                <img src="images/main-logo-white.png" alt="logo">
+                            </div>
+                            <div class="about-us">
+                                <h3 class="title-padd-sm">About Us</h3>
+                                <span>Price</span>
+                                <span>Menu</span>
+                                <span>Main Page</span>
+                            </div>
+                            <div class="services">
+                                <h3 class="title-padd-sm">Services</h3>
+                                <span>Delivery</span>
+                                <span>Packaging</span>
+                                
+                            </div>
+                            <div class="schedule">
+                                <h3 class="title-padd-sm">Schedule</h3>
+                                <span>Mon – Fri: 8 AM – 6 PM</span>
+                                <span>Working Hours</span>
+                            </div>
+                            <div class="sm-icons">
+                                <a href="#"><i class="fa-brands fa-square-facebook sm-icon"></i></a>
+                    <a href="#"> <i class="fa-brands fa-square-twitter sm-icon"></i></a>
+                    <a href="#">  <i class="fa-brands fa-linkedin sm-icon"></i></a>
+                     <a href="#"> <i class="fa-brands fa-square-google-plus sm-icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
         </article>
     </main>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
